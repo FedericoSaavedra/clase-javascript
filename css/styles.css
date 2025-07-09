@@ -1,0 +1,25 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  padding: 2rem;
+}
+
+h1 {
+  color: #333;
+}
+
+form {
+  margin-bottom: 1rem;
+}
+
+input, button {
+  padding: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+#listaProductos {
+  margin-top: 1rem;
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 5px;
+}
