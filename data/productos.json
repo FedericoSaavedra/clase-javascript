@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "nombre": "Remera Negra",
+    "descripcion": "Remera de algodón 100% de color negro, cómoda y fresca.",
+    "precio": 4500,
+    "imagen": "img/remera-negra.png",
+    "stock": 20
+  },
+  {
+    "id": 2,
+    "nombre": "Zapatillas Running",
+    "descripcion": "Zapatillas deportivas para running con suela amortiguada.",
+    "precio": 18500,
+    "imagen": "img/zapatillas-running.png",
+    "stock": 10
+  },
+  {
+    "id": 3,
+    "nombre": "Mochila Azul",
+    "descripcion": "Mochila de lona color azul, ideal para viajes y uso diario.",
+    "precio": 8900,
+    "imagen": "img/mochila-azul.png",
+    "stock": 15
+  }
+]
