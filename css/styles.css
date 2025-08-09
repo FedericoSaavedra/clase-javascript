@@ -1,9 +1,10 @@
 body {
   font-family: Arial, sans-serif;
   margin: 0;
-  background: url("https://es.wallpapers.com/imagenes/imagende-una-feliz-familia-corriendo-en-un-campo-de-hierba-fe18wx7xrcymq0ak.html") no-repeat center center fixed;
+  background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1350&q=80') no-repeat center center fixed;
   background-size: cover;
 }
+
 
 
 header {
