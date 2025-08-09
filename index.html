@@ -1,25 +1,69 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Simulador de Compra</title>
-  <link rel="stylesheet" href="css/styles.css">
-  <script src="js/app.js" defer></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>MiStore — Simulador Ecommerce</title>
+
+  <!-- SweetAlert2 (reemplaza alert/prompt/confirm) -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
-  <main>
-    <h1>Simulador de Compra</h1>
-    
-    <form id="formProducto">
-      <input type="text" id="nombre" placeholder="Nombre del producto" required>
-      <input type="number" id="precio" placeholder="Precio" required>
-      <button type="submit">Agregar</button>
-    </form>
+  <header class="site-header">
+    <h1>MiStore — Simulador Ecommerce</h1>
+    <button id="btn-open-cart" class="cart-btn">Carrito (<span id="cart-count">0</span>)</button>
+  </header>
 
-    <section id="listaProductos">
-      <!-- Productos agregados aparecerán aquí -->
-    </section>
+  <main>
+    <section id="catalog" class="catalog"></section>
+
+    <aside id="cart-panel" class="cart-panel hidden">
+      <h2>Carrito</h2>
+      <div id="cart-items"></div>
+      <div class="cart-summary">
+        <p>Total: $<span id="cart-total">0.00</span></p>
+        <button id="btn-checkout" class="primary">Finalizar compra</button>
+      </div>
+      <button id="btn-close-cart" class="link">Cerrar</button>
+    </aside>
   </main>
+
+  <!-- Checkout modal (hidden) -->
+  <div id="checkout-modal" class="modal hidden">
+    <div class="modal-content">
+      <h3>Checkout</h3>
+      <form id="checkout-form">
+        <label>
+          Nombre
+          <input type="text" id="input-name" name="name" required />
+        </label>
+        <label>
+          Email
+          <input type="email" id="input-email" name="email" required />
+        </label>
+        <label>
+          Dirección
+          <input type="text" id="input-address" name="address" required />
+        </label>
+        <label>
+          Método de pago
+          <select id="input-payment" name="payment">
+            <option value="tarjeta">Tarjeta</option>
+            <option value="transferencia">Transferencia</option>
+            <option value="efectivo">Efectivo (simulado)</option>
+          </select>
+        </label>
+
+        <div class="modal-actions">
+          <button type="submit" class="primary">Confirmar pedido</button>
+          <button type="button" id="btn-cancel-checkout" class="link">Cancelar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/app.js" type="module"></script>
 </body>
 </html>
